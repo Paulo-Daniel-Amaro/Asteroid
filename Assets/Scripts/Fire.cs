@@ -10,7 +10,7 @@ public class Fire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, 3f);
     }
 
     // Update is called once per frame
@@ -21,5 +21,13 @@ public class Fire : MonoBehaviour
     public void piupiu(Vector2 dir)
     {
         rb2d.AddForce(dir*vel);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("asteroid"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }
