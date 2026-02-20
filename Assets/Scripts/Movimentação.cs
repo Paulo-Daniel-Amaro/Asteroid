@@ -49,4 +49,6 @@ public class Movimentação : MonoBehaviour
       GameObject obj =  Instantiate(fire, posfire.position, this.transform.rotation);
         obj.GetComponent<Fire>().piupiu(this.transform.up);
     }
+
+  
 }
