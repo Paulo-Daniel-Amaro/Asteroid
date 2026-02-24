@@ -163,4 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 2186356668798653076}
   dano: 5
-  vel: 500
+  vel: 1000

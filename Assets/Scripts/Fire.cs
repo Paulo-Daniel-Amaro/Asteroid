@@ -7,6 +7,7 @@ public class Fire : MonoBehaviour
     public Rigidbody2D rb2d;
     public int dano;
     public float vel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Fire : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("asteroid"))
         {
+            GameObject.FindWithTag("Player").gameObject.GetComponent<Movimentação>().pontua(collision.gameObject.GetComponent<Meteoro>().poto);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
