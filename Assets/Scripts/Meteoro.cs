@@ -24,7 +24,7 @@ public class Meteoro : MonoBehaviour
     public void asteroidv(Vector3 dire)
     {
         Vector3 dir = dire - this.gameObject.transform.position ;
-        rb2d.velocity = dir * vel;
+        rb2d.linearVelocity = dir * vel;
     }
  
 }

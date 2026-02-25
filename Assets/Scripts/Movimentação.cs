@@ -39,7 +39,7 @@ public class Movimentação : MonoBehaviour
             eixoY = 0;
         }
         eixoPos = this.transform.up*eixoY*velanda;
-        rb2d.velocity = eixoPos;
+        rb2d.linearVelocity = eixoPos;
         if(rb2d.angularVelocity<= -limitrot)
         {
             rb2d.angularVelocity = -limitrot;
